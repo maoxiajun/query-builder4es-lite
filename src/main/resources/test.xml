@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conns>
+    <conn alias="a">
+        <host>127.0.0.1</host>
+        <port>8080</port>
+    </conn>
+    <conn alias="b">
+        <host>127.0.0.2</host>
+        <port>8081</port>
+    </conn>
+</conns>
