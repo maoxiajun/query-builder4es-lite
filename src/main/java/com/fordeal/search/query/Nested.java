@@ -1,6 +1,6 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
 
 import java.util.Map;
@@ -55,7 +55,7 @@ public class Nested implements QueryCondition {
 
     @Override
     public Object value() {
-        Map<String, Object> body = Maps.newHashMapWithExpectedSize(2);
+        Map<String, Object> body = Maps2.of(2);
         body.put("path", this.path);
         body.put("query", this.query.toMap());
         return body;

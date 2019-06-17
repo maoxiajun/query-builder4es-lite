@@ -1,6 +1,6 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
 
 import java.util.LinkedList;
@@ -40,8 +40,7 @@ public class Bool implements QueryCondition {
      * @return self
      */
     public Bool must(QueryCondition cond) {
-        Map<String, Object> query = Maps.newHashMapWithExpectedSize(1);
-        query.put(cond.cond(), cond.value());
+        Map<String, Object> query = Maps2.of(cond.cond(), cond.value());
         this.must.add(query);
         return this;
     }
@@ -61,8 +60,7 @@ public class Bool implements QueryCondition {
      * @return self
      */
     public Bool should(QueryCondition cond) {
-        Map<String, Object> query = Maps.newHashMapWithExpectedSize(1);
-        query.put(cond.cond(), cond.value());
+        Map<String, Object> query = Maps2.of(cond.cond(), cond.value());
         this.should.add(query);
         return this;
     }
@@ -73,8 +71,7 @@ public class Bool implements QueryCondition {
      * @return self
      */
     public Bool mustNot(QueryCondition cond) {
-        Map<String, Object> query = Maps.newHashMapWithExpectedSize(1);
-        query.put(cond.cond(), cond.value());
+        Map<String, Object> query = Maps2.of(cond.cond(), cond.value());
         this.mustNot.add(query);
         return this;
     }
@@ -100,8 +97,7 @@ public class Bool implements QueryCondition {
      * @return self
      */
     public Bool filter(QueryCondition cond) {
-        Map<String, Object> query = Maps.newHashMapWithExpectedSize(1);
-        query.put(cond.cond(), cond.value());
+        Map<String, Object> query = Maps2.of(cond.cond(), cond.value());
         this.filter.add(query);
         return this;
     }
@@ -113,7 +109,7 @@ public class Bool implements QueryCondition {
 
     @Override
     public Object value() {
-        Map<String, Object> params = Maps.newHashMapWithExpectedSize(5);
+        Map<String, Object> params = Maps2.of(5);
         if (!this.must.isEmpty()) {
             params.put("must", this.must);
         }

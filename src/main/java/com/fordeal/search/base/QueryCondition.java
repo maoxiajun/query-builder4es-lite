@@ -1,7 +1,6 @@
 package com.fordeal.search.base;
 
 import com.alibaba.fastjson.JSON;
-import com.google.common.collect.Maps;
 
 import java.util.Map;
 
@@ -35,7 +34,7 @@ public interface QueryCondition {
      * @return map
      */
     default Map<String, Object> toMap() {
-        Map<String, Object> map = Maps.newHashMapWithExpectedSize(1);
+        Map<String, Object> map = Maps2.of(1);
         map.put(cond(), value());
         return map;
     }

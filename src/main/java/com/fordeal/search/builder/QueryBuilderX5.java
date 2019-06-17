@@ -3,7 +3,6 @@ package com.fordeal.search.builder;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.fordeal.search.base.*;
-import com.google.common.collect.Maps;
 
 import java.util.Collections;
 import java.util.Map;
@@ -24,7 +23,7 @@ public class QueryBuilderX5 {
     private QueryCondition highlight;
 
     public QueryBuilderX5() {
-        this.query = Maps.newHashMap();
+        this.query = Maps2.of();
         this.size = Constants.UNSET;
         this.from = 0;
     }
@@ -46,7 +45,7 @@ public class QueryBuilderX5 {
      */
     public QueryBuilderX5 addAggs(AggCondition cond) {
         if (null == this.aggs) {
-            this.aggs = Maps.newHashMap();
+            this.aggs = Maps2.of();
         }
         this.aggs.put(cond.name(), cond.value());
         return this;
@@ -121,13 +120,13 @@ public class QueryBuilderX5 {
      * @return self
      */
     public String toJsonString(SerialFeatures features) {
-        Map<String, Object> finalQuery = Maps.newHashMap();
+        Map<String, Object> finalQuery = Maps2.of();
 
         // query & filter
         if (!this.query.isEmpty()) {
             finalQuery.put("query", this.query);
         } else {
-            Map<String, Object> matchAll = Maps.newHashMap();
+            Map<String, Object> matchAll = Maps2.of();
             matchAll.put("match_all", Collections.emptyMap());
             finalQuery.put("query", matchAll);
         }

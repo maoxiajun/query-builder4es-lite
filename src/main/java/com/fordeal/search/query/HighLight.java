@@ -1,6 +1,6 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
 
 import java.util.*;
@@ -64,7 +64,7 @@ public class HighLight implements QueryCondition {
 
     @Override
     public Object value() {
-        Map<String, Object> highlight = Maps.newHashMapWithExpectedSize(3);
+        Map<String, Object> highlight = Maps2.of(3);
         if (!preTags.isEmpty()) {
             highlight.put("pre_tags", preTags);
         }
@@ -74,8 +74,7 @@ public class HighLight implements QueryCondition {
         if (!fields.isEmpty()) {
             List<Object> fds = new ArrayList<>(fields.size());
             for (HighLightField field : fields) {
-                Map<String, Object> fd = Maps.newHashMapWithExpectedSize(1);
-                fd.put(field.cond(), field.value());
+                Map<String, Object> fd = Maps2.of(field.cond(), field.value());
                 fds.add(fd);
             }
             highlight.put("fields", fds);

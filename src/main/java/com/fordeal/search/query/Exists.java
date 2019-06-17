@@ -1,9 +1,7 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
-
-import java.util.Map;
 
 /**
  * 使用方法：
@@ -31,9 +29,7 @@ public class Exists implements QueryCondition {
 
     @Override
     public Object value() {
-        Map<String, Object> map = Maps.newHashMapWithExpectedSize(1);
-        map.put("field", field);
-        return map;
+        return Maps2.of("field", field);
     }
 
 }

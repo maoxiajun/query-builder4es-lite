@@ -1,9 +1,12 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 相当于sql的where bar in (1, 2, 3)，也是个costly查询，重复两次即会进入缓存
@@ -70,7 +73,7 @@ public class Terms implements QueryCondition {
 
     @Override
     public Object value() {
-        Map<String, Object> params = Maps.newHashMapWithExpectedSize(1);
+        Map<String, Object> params = Maps2.of(1);
         params.put(field, values);
         return params;
     }

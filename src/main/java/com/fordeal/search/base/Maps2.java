@@ -1,7 +1,6 @@
 package com.fordeal.search.base;
 
-import com.google.common.collect.Maps;
-
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -10,24 +9,24 @@ import java.util.Map;
 public class Maps2 {
 
     public static <K, V> Map<K, V> of() {
-        return Maps.newHashMap();
+        return new HashMap<>();
     }
 
     public static <K, V> Map<K, V> of(int initSize) {
-        return Maps.newHashMapWithExpectedSize(initSize);
+        return new HashMap<>(initSize);
     }
 
     public static <K, V> Map<K, V> of(K key, V value) {
-        Map<K, V> val = Maps.newHashMap();
-        val.put(key, value);
-        return val;
+        return new HashMap<K, V>() {{
+            put(key, value);
+        }};
     }
 
-    public static <K, V> Map<K, V> of(K key, V value, K key2, V value2) {
-        Map<K, V> val = Maps.newHashMap();
-        val.put(key, value);
-        val.put(key2, value2);
-        return val;
+    public static <K, V> Map<K, V> of(K key1, V value1, K key2, V value2) {
+        return new HashMap<K, V>() {{
+            put(key1, value1);
+            put(key2, value2);
+        }};
     }
 
 }

@@ -1,6 +1,6 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
 
 import java.util.Map;
@@ -32,8 +32,6 @@ public class Term implements QueryCondition {
 
     @Override
     public Object value() {
-        Map<String, Object> params = Maps.newHashMapWithExpectedSize(1);
-        params.put(field, value);
-        return params;
+        return Maps2.of(field, value);
     }
 }

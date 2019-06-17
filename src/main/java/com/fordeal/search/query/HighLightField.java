@@ -1,6 +1,6 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
 
 import java.util.Collections;
@@ -41,9 +41,8 @@ public class HighLightField implements QueryCondition {
     @Override
     public Object value() {
         if (null != highlightQuery) {
-            Map<String, Object> fd = Maps.newHashMapWithExpectedSize(1);
-            Map<String, Object> query = Maps.newHashMapWithExpectedSize(1);
-            query.put(highlightQuery.cond(), highlightQuery.value());
+            Map<String, Object> fd = Maps2.of(1);
+            Map<String, Object> query = Maps2.of(highlightQuery.cond(), highlightQuery.value());
             fd.put("highlight_query", query);
             return fd;
         } else {

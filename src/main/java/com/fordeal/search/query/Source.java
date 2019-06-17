@@ -1,9 +1,12 @@
 package com.fordeal.search.query;
 
-import com.google.common.collect.Maps;
+import com.fordeal.search.base.Maps2;
 import com.fordeal.search.base.QueryCondition;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 过滤返回字段，相当于 select foo, bar from table
@@ -47,7 +50,7 @@ public class Source implements QueryCondition {
 
     @Override
     public Object value() {
-        Map<String, Object> params = Maps.newHashMapWithExpectedSize(2);
+        Map<String, Object> params = Maps2.of(2);
         if (!this.includes.isEmpty()) {
             params.put("includes", this.includes);
         }
