@@ -1,6 +1,7 @@
 package com.youzan.bigdata.sort;
 
-import com.youzan.bigdata.query.Sort;
+import com.fordeal.search.query.Sort;
+import com.fordeal.search.sort.AdvancedSort;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

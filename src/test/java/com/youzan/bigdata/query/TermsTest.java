@@ -1,13 +1,11 @@
 package com.youzan.bigdata.query;
 
-import com.youzan.bigdata.QueryBuilders;
+import com.fordeal.search.QueryBuilders;
+import com.fordeal.search.query.Bool;
+import com.fordeal.search.query.Terms;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by maoxiajun on 17/8/16.

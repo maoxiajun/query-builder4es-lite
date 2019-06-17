@@ -1,8 +1,9 @@
 package com.youzan.bigdata.aggregation;
 
-import com.youzan.bigdata.QueryBuilders;
-import com.youzan.bigdata.query.Bool;
-import com.youzan.bigdata.query.Range;
+import com.fordeal.search.QueryBuilders;
+import com.fordeal.search.aggregation.Sum;
+import com.fordeal.search.query.Bool;
+import com.fordeal.search.query.Range;
 import org.junit.Before;
 import org.junit.Test;
 

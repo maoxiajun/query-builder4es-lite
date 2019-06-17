@@ -1,12 +1,11 @@
 package com.youzan.bigdata;
 
-import com.youzan.bigdata.base.QueryCondition;
-import com.youzan.bigdata.query.*;
+import com.fordeal.search.QueryBuilders;
+import com.fordeal.search.query.*;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.Instant;
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Date;
 

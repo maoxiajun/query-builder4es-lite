@@ -1,6 +1,8 @@
 package com.youzan.bigdata.aggregation;
 
-import com.youzan.bigdata.builder.QueryBuilderX5;
+import com.fordeal.search.aggregation.Cardinality;
+import com.fordeal.search.aggregation.TermsAgg;
+import com.fordeal.search.builder.QueryBuilderX5;
 import org.junit.Before;
 import org.junit.Test;
 

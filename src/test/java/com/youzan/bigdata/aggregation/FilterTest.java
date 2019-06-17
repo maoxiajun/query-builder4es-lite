@@ -1,6 +1,8 @@
 package com.youzan.bigdata.aggregation;
 
-import com.youzan.bigdata.query.Term;
+import com.fordeal.search.aggregation.Avg;
+import com.fordeal.search.aggregation.Filter;
+import com.fordeal.search.query.Term;
 import org.junit.Before;
 import org.junit.Test;
 

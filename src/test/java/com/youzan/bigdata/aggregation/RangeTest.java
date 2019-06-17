@@ -1,5 +1,7 @@
 package com.youzan.bigdata.aggregation;
 
+import com.fordeal.search.aggregation.Avg;
+import com.fordeal.search.aggregation.Range;
 import org.junit.Before;
 import org.junit.Test;
 

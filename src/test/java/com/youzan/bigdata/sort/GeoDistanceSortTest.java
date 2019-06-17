@@ -1,8 +1,9 @@
 package com.youzan.bigdata.sort;
 
-import com.youzan.bigdata.base.BaseSort;
-import com.youzan.bigdata.builder.SortBuilder;
-import com.youzan.bigdata.query.Sort;
+import com.fordeal.search.base.BaseSort;
+import com.fordeal.search.builder.SortBuilder;
+import com.fordeal.search.query.Sort;
+import com.fordeal.search.sort.GeoDistanceSort;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

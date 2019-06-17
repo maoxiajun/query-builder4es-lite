@@ -1,5 +1,6 @@
 package com.youzan.bigdata.query;
 
+import com.fordeal.search.query.Exists;
 import org.junit.Assert;
 import org.junit.Test;
 

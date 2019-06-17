@@ -1,6 +1,8 @@
 package com.youzan.bigdata.query;
 
-import com.youzan.bigdata.QueryBuilders;
+import com.fordeal.search.query.Bool;
+import com.fordeal.search.query.Term;
+import com.fordeal.search.query.Terms;
 import org.junit.Assert;
 import org.junit.Test;
 

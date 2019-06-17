@@ -1,5 +1,6 @@
 package com.youzan.bigdata.query;
 
+import com.fordeal.search.query.MatchPhrase;
 import org.junit.Assert;
 import org.junit.Test;
 

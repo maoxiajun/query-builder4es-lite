@@ -1,6 +1,7 @@
 package com.youzan.bigdata.aggregation;
 
-import com.youzan.bigdata.QueryBuilders;
+import com.fordeal.search.QueryBuilders;
+import com.fordeal.search.aggregation.Min;
 import org.junit.Before;
 import org.junit.Test;
 
